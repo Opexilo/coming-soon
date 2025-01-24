@@ -1,0 +1,135 @@
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 6px;
+}
+
+@media (min-width: 700px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+html,
+body,
+.banner {
+  height: 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/banner.webp");
+  background-size: cover;
+  background-position: center top;
+  text-align: center;
+  padding: 15px;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner__logo__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.banner__logo {
+  height: 40rem; /* Adjust this value to our preferred logo size */
+  width: auto;
+}
+
+.banner__title {
+  --text-stroke: 1px;
+  color: #ffffff;
+  font-size: 12rem;
+  font-weight: 800;
+  text-shadow: calc(var(--text-stroke) * -1) calc(var(--text-stroke) * -1) 0px
+      #000000,
+    calc(var(--text-stroke) * -1) 1px 0px #000000,
+    var(--text-stroke) calc(var(--text-stroke) * -1) 0px #000000,
+    var(--text-stroke) var(--text-stroke) 0px #000000, 0.8rem 0.6rem 0px #000000;
+  margin-bottom: 3rem;
+  line-height: 1;
+}
+
+.banner__text {
+  color: #000000;
+  font-size: 2.8rem;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-item span {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffa500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-label {
+  font-size: 1.6rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 699px) {
+  .banner__logo {
+    height: 25rem; /* Smaller logo for mobile devices */
+  }
+
+  .banner__title {
+    font-size: 8rem;
+  }
+
+  .countdown {
+    gap: 1rem;
+  }
+
+  .countdown-item span {
+    font-size: 3rem;
+  }
+
+  .countdown-label {
+    font-size: 1.4rem;
+  }
+}
